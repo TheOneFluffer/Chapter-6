@@ -11,3 +11,35 @@ function cal_Value(v, w) {
 
 cal_Value(1, 2);
 
+var input = require('readline-sync');
+var num1 = input.questionInt("Please enter 1st integer: ");
+var num2 = input.questionInt("Please enter 2nd integer: ");
+var First = "";
+var Second = "";
+
+function getInput(s)
+{
+    First = num1 + " ";
+    Second = num2 + " ";
+    callback(First, Second);
+}
+
+function findMax(First, Second)
+{
+    if (First == Second)
+    {
+        console.log("The 2 numbers are equal");
+    }
+
+    else if (Second > First)
+    {
+        console.log("2nd number is bigger");
+    }
+
+    else if (Second < First)
+    {
+        console.log("1st number is bigger");
+    }
+}
+
+getInput(findMax);
