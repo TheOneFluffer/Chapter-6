@@ -1,6 +1,6 @@
 var input = require("readline-sync");
 var num = readInput();
-var number;
+var number, i, pattern;
 
 var pat = choosePattern();
 switch(pat) 
@@ -50,6 +50,7 @@ function printPattern1(n)
             space = space + " ";
         }
     }
+    console.log(space);
 }
 
 function printPattern2(n)
@@ -62,10 +63,11 @@ function printPattern2(n)
             space = space + " ";
         }
     }
+    console.log(space);
 }
 
 function printPattern3(n)
-{ 
+{
     var space = ""
     for (var i = 0; i < n; i++)
     {
@@ -74,5 +76,24 @@ function printPattern3(n)
             space = space + " ";
         }
     }
+    console.log(space);
 }
 
+number = readInput(i);
+switch (choosePattern(pat))
+{
+    case 1:
+        printPattern1(i);
+        break;
+    case 2:
+        printPattern2(i);
+        break;
+    case 3:
+        printPattern3(i);
+        break;
+    case 4:
+        console.log("Shutting Down...");
+        break;
+    default:
+        console.log("Invalid input!");
+}

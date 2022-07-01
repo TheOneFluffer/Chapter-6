@@ -1,4 +1,4 @@
-
+/*
 function cal_Value(v, w) {
     switch (v) {
         case 1: w += v;
@@ -42,4 +42,25 @@ function findMax(First, Second)
     }
 }
 
-getInput(findMax);
+getInput(findMax);*/
+
+var num1 = 10
+var num2 = 35;
+var x = 5;
+var space = "";
+for (num1; num1 <= num2; num1 += x)
+{
+    space = num1 + " ";
+    process.stdout.write(space);
+}
+
+function allMultiple(num1, num2, x)
+{
+    for (num1; num1 <= num2; num1 += x)
+    {
+        space = num1 + " ";
+        process.stdout.write(space);
+    }
+}
+
+allMultiple(10, 35, 5);
